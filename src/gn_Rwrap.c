@@ -132,6 +132,9 @@ SEXP network_monte_carlo_Rwrap(SEXP R_n,
       outcomes[k*n_node+i] = net.outcome[i][k];
   }
 
+	
+/*This seems to be where the trajectories are created for Results*/
+	/*Need to understand how this is being used then?*/
   SEXP R_trajectories = PROTECT(NEW_LIST(e.n_experiment));
   struct trajectory t;
   for (i = 0; i < e.n_experiment; i++) {
